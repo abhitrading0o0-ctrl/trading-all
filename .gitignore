@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build & Output directories
+dist/
+build/
+*.log
+
+# Database runtime WAL & SHM files (preserve template/db schema if needed)
+server/trading.db-wal
+server/trading.db-shm
+
+# Environment & local secrets
+.env
+.env.local
+.env.*.local
+
+# IDE & System files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
