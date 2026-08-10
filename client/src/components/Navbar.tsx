@@ -52,11 +52,16 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="flex items-center gap-2.5 cursor-pointer group"
             onClick={() => handleNavClick('dashboard')}
           >
-            <img
-              src="/logo.png"
-              alt="ForFuture Trade Logo"
-              className="h-9 w-auto object-contain rounded bg-white p-0.5 shadow-xs border border-slate-200/60 group-hover:scale-105 transition-transform"
-            />
+            <div className="relative group/logo shrink-0">
+              <div className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 opacity-60 blur-xs group-hover/logo:opacity-100 transition-opacity" />
+              <div className="relative bg-white p-1 rounded-lg border border-slate-200 flex items-center justify-center shadow-xs">
+                <img
+                  src="/logo.png"
+                  alt="ForFuture Trade Logo"
+                  className="h-7 w-auto object-contain"
+                />
+              </div>
+            </div>
             <div>
               <div className="font-mono font-bold tracking-tight flex items-center gap-1.5 text-sm">
                 <span>ForFuture</span>

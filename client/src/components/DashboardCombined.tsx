@@ -4,7 +4,7 @@ import { Watchlist } from './Watchlist';
 import { ResearchPage } from './ResearchPage';
 import { TradeJournal } from './TradeJournal';
 import type { CalcPrefill } from './RiskCalculator';
-import { LayoutGrid, Maximize2, ExternalLink } from 'lucide-react';
+import { Maximize2, ExternalLink } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 interface DashboardCombinedProps {
@@ -35,14 +35,16 @@ export const DashboardCombined: React.FC<DashboardCombinedProps> = ({
       {/* Combined View Header Banner */}
       <div className={`terminal-card p-4 flex items-center justify-between border-l-4 ${theme === 'light' ? 'border-l-blue-600 bg-white shadow-xs' : 'border-l-blue-500 bg-[#05070a]'
         }`}>
-        <div>
-          <h1 className={`text-lg font-bold flex items-center gap-2 ${theme === 'light' ? 'text-slate-900' : 'text-white'}`}>
-            <LayoutGrid className={`w-5 h-5 ${theme === 'light' ? 'text-blue-600' : 'text-blue-400'}`} />
-            BLOOMBERG TERMINAL COMBINED DASHBOARD
-          </h1>
-          <p className={`text-xs mt-1 font-sans ${theme === 'light' ? 'text-slate-600 font-medium' : 'text-slate-400'}`}>
-            Unified multi-panel telemetry view composing Watchlist, Research, Strategy Voting, and Journal. Click panel titles to jump to full-screen standalone views.
-          </p>
+        <div className="flex items-center gap-3">
+          <img src="/logo.png" alt="ForFuture Trade Logo" className="h-10 w-auto object-contain rounded-lg bg-white p-1 shadow-sm border border-blue-400/40 shrink-0" />
+          <div>
+            <h1 className={`text-lg font-bold flex items-center gap-2 ${theme === 'light' ? 'text-slate-900' : 'text-white'}`}>
+              BLOOMBERG TERMINAL COMBINED DASHBOARD
+            </h1>
+            <p className={`text-xs mt-1 font-sans ${theme === 'light' ? 'text-slate-600 font-medium' : 'text-slate-400'}`}>
+              Unified multi-panel telemetry view composing Watchlist, Research, Strategy Voting, and Journal. Click panel titles to jump to full-screen standalone views.
+            </p>
+          </div>
         </div>
 
         <div className="hidden sm:flex items-center gap-2 text-xs">

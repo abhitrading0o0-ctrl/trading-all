@@ -89,6 +89,20 @@ export const PageTransitionOverlay: React.FC<PageTransitionOverlayProps> = ({
               : 'bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.3)_0%,transparent_70%)]'
           }`}
         />
+
+        {/* Centered Animated Logo Emblem during 3D Transition */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+          <div className="relative group">
+            <div className="absolute -inset-3 rounded-2xl bg-gradient-to-r from-blue-500 via-sky-400 to-indigo-500 opacity-60 blur-xl animate-pulse" />
+            <div className="relative bg-white/95 p-4 rounded-2xl border-2 border-blue-400/80 shadow-[0_0_50px_rgba(59,130,246,0.5)] flex flex-col items-center gap-2 transform scale-105">
+              <img src="/logo.png" alt="ForFuture Trade Logo" className="h-16 w-auto object-contain drop-shadow" />
+              <div className="text-center font-mono">
+                <div className="text-xs font-extrabold tracking-widest text-slate-900 uppercase">ForFuture Trade</div>
+                <div className="text-[10px] text-blue-600 font-bold tracking-wider">TERMINAL ACTIVE</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
