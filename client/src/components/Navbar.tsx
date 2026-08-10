@@ -49,15 +49,14 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Left Branding */}
         <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-start">
           <div
-            className="flex items-center gap-2 cursor-pointer group"
+            className="flex items-center gap-2.5 cursor-pointer group"
             onClick={() => handleNavClick('dashboard')}
           >
-            <div className={`w-8 h-8 rounded border flex items-center justify-center font-bold transition-all ${theme === 'light'
-                ? 'bg-blue-50 border-blue-200 text-blue-600 group-hover:bg-blue-600 group-hover:text-white'
-                : 'bg-blue-500/10 border-blue-500/30 text-blue-400 group-hover:bg-blue-600 group-hover:text-white'
-              }`}>
-              <BarChart2 className="w-5 h-5" />
-            </div>
+            <img
+              src="/logo.png"
+              alt="ForFuture Trade Logo"
+              className="h-9 w-auto object-contain rounded bg-white p-0.5 shadow-xs border border-slate-200/60 group-hover:scale-105 transition-transform"
+            />
             <div>
               <div className="font-mono font-bold tracking-tight flex items-center gap-1.5 text-sm">
                 <span>ForFuture</span>

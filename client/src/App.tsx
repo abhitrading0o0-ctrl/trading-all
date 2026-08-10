@@ -260,11 +260,12 @@ function MainLayout() {
         </div>
       </main>
 
-      <footer className={`py-3 text-center text-xs font-mono border-t transition-colors ${theme === 'light'
+      <footer className={`py-3 text-center text-xs font-mono border-t transition-colors flex items-center justify-center gap-2 ${theme === 'light'
           ? 'bg-white border-slate-200 text-slate-500'
           : 'bg-[#050505] border-slate-800/80 text-slate-500'
         }`}>
-        ForFutureTrade • Personal Trading Research & Journal • Localhost Only
+        <img src="/logo.png" alt="ForFuture Trade Logo" className="h-5 w-auto object-contain rounded bg-white p-0.5" />
+        <span>ForFutureTrade • Personal Trading Research & Journal</span>
       </footer>
     </div>
   );
